@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layout/MainLayout";
 import Home from "../pages/Home";
+import UpdateProfile from "../pages/UpdateProfile";
+import Login from "../pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -13,8 +15,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/updateProfile",
-        element: <div>Update Profile</div>,
-      }
+        element: <UpdateProfile></UpdateProfile>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
     ],
   },
 ]);
