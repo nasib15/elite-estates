@@ -5,6 +5,8 @@ import UpdateProfile from "../pages/UpdateProfile";
 import Login from "../pages/Login";
 import ViewDetails from "../components/ViewDetails";
 import ErrorPage from "../components/ErrorPage";
+import Register from "../pages/Register";
+
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/register",
+        element: <Register></Register>,
       },
       {
         path: "/details/:id",
