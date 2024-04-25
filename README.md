@@ -1,8 +1,15 @@
-# React + Vite
+# Elite Estates
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website Link: [https://knh-nehal-elite-estates.vercel.app/](https://knh-nehal-elite-estates.vercel.app/)
 
-Currently, two official plugins are available:
+### Characteristics of the Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- It is fully responsive
+- It has dynamic routes to know where are you going
+- You can login into the website
+-
+
+### NPM Packgaes I have used
+
+- Swiper JS
+- React-leaflet

@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export function Login() {
@@ -21,7 +20,6 @@ export function Login() {
             </Typography>
             <Input
               size="lg"
-              required={true}
               placeholder="name@mail.com"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{
@@ -33,7 +31,6 @@ export function Login() {
             </Typography>
             <Input
               type="password"
-              required={true}
               size="lg"
               placeholder="********"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
@@ -53,9 +50,6 @@ export function Login() {
           <div>
             <button className="my-4 flex w-full gap-2 items-center justify-center  border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200">
               <FcGoogle className="text-2xl"></FcGoogle>Continue with Google
-            </button>
-            <button className="my-4 flex w-full gap-2 items-center justify-center  border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200">
-              <FaGithub className="text-2xl"></FaGithub>Continue with Github
             </button>
           </div>
           <Button className="mt-6 bg-[#1abc9c]" fullWidth>
