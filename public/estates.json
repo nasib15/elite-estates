@@ -72,8 +72,8 @@
     "segment_name": "Penthouse",
     "description": "Elevate your lifestyle in this exquisite city penthouse boasting unrivaled panoramic views of the skyline. Spanning multiple levels, this sophisticated residence offers luxurious living spaces, a chef's kitchen, expansive terraces for outdoor entertaining, and access to premium building amenities including a rooftop pool, fitness center, and concierge services.",
     "short_description": "Elevate your lifestyle in this exquisite city penthouse with unrivaled panoramic views.",
-    "price": "$5,000,000",
-    "status": "sale",
+    "price": "$5,000/month",
+    "status": "rent",
     "area": "6000 sq ft",
     "location": "San Francisco, CA",
     "facilities": ["living room", "rooftop terrace", "concierge"]

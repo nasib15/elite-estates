@@ -1,4 +1,8 @@
+import { MapContainer, TileLayer, Popup, Marker } from "react-leaflet";
+import "../index.css";
+
 const Footer = () => {
+  const position = [51.505, -0.09];
   return (
     <div className="mt-24 bg-[#e7e7e7]">
       <footer className="mx-auto max-w-[96%] px-4 divide-y  text-black">
@@ -13,6 +17,17 @@ const Footer = () => {
                 Elite <span className="text-[#1abc9c]">Estates</span>
               </span>
             </a>
+            <div className="w-96 mt-4">
+              <MapContainer center={position} zoom={16} scrollWheelZoom={false}>
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={position}>
+                  <Popup>Elite Estates</Popup>
+                </Marker>
+              </MapContainer>
+            </div>
           </div>
           <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
             <div className="space-y-3">

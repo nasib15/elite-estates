@@ -11,9 +11,11 @@ import {
 
 import { HiOutlineOfficeBuilding } from "react-icons/hi";
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const EstateCard = ({ estate }) => {
   const {
+    id,
     segment_name,
     estate_title,
     price,
@@ -77,9 +79,11 @@ const EstateCard = ({ estate }) => {
       </CardBody>
       <CardFooter className="pt-3 flex justify-between items-center">
         <Typography color="gray">Price:{price}</Typography>
-        <Button size="lg" className="bg-[#1abc9c]">
-          VIEW DETAILS
-        </Button>
+        <Link to={`/details/${id}`}>
+          <Button size="lg" className="bg-[#1abc9c]">
+            VIEW DETAILS
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
   );
