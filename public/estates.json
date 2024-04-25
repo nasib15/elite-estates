@@ -1,10 +1,12 @@
 [
   {
-    "image": "image_url_1.jpg",
+    "image": "https://i.postimg.cc/wMFZCxrm/14114.jpg",
     "estate_title": "Luxury Villa",
     "id": "1",
     "segment_name": "Luxury",
     "description": "Experience unparalleled luxury living in this exquisite villa, boasting panoramic views of the city skyline and surrounding mountains. This meticulously designed estate features high-end finishes, expansive living spaces, a state-of-the-art kitchen, and lush outdoor gardens with a sparkling swimming pool and entertaining areas.",
+    "short_description": "Experience luxury living with panoramic views and lavish amenities in this exquisite villa.",
+
     "price": "$1,500,000",
     "status": "sale",
     "area": "5000 sq ft",
@@ -12,11 +14,12 @@
     "facilities": ["living room", "swimming pool", "garden"]
   },
   {
-    "image": "image_url_2.jpg",
+    "image": "https://i.postimg.cc/fTT6xX3j/2150666425.jpg",
     "estate_title": "Cozy Apartment",
     "id": "2",
     "segment_name": "Apartment",
     "description": "Discover urban living at its finest in this cozy apartment located in the heart of the bustling city. This charming residence features an open-concept layout, flooded with natural light, a modern kitchen with stainless steel appliances, a comfortable bedroom, and access to premium building amenities including a fitness center, lounge, and 24-hour concierge.",
+    "short_description": "Experience urban living at its finest in this charming apartment with modern amenities.",
     "price": "$2,500/month",
     "status": "rent",
     "area": "800 sq ft",
@@ -24,11 +27,12 @@
     "facilities": ["living room", "gym", "security"]
   },
   {
-    "image": "image_url_3.jpg",
+    "image": "https://i.postimg.cc/L4VcYvs8/2151302742.jpg",
     "estate_title": "Modern Townhouse",
     "id": "3",
     "segment_name": "Townhouse",
     "description": "Indulge in contemporary living in this sleek and stylish townhouse nestled in a prime location. Boasting clean lines, high ceilings, and premium finishes throughout, this residence offers a perfect blend of sophistication and functionality. Enjoy spacious living areas, a gourmet kitchen, private outdoor spaces, and convenient access to nearby amenities.",
+    "short_description": "Indulge in contemporary living with clean lines and premium finishes in this sleek townhouse.",
     "price": "$700,000",
     "status": "sale",
     "area": "2500 sq ft",
@@ -36,11 +40,12 @@
     "facilities": ["living room", "garage", "backyard"]
   },
   {
-    "image": "image_url_4.jpg",
+    "image": "https://i.postimg.cc/90csgwL2/45729.jpg",
     "estate_title": "Beachfront Condo",
     "id": "4",
     "segment_name": "Condo",
     "description": "Embrace coastal living in this luxurious beachfront condo offering unparalleled ocean views and resort-style amenities. Featuring floor-to-ceiling windows, designer finishes, and expansive balconies, this residence epitomizes modern beachside elegance. Enjoy direct beach access, a sparkling swimming pool, fitness center, and concierge services.",
+    "short_description": "Embrace coastal living in this luxurious beachfront condo with breathtaking ocean views.",
     "price": "$3,000,000",
     "status": "sale",
     "area": "3500 sq ft",
@@ -48,11 +53,12 @@
     "facilities": ["living room", "swimming pool", "beach access"]
   },
   {
-    "image": "image_url_5.jpg",
+    "image": "https://i.postimg.cc/ydmwTyXn/gus-ruballo-h5-QNcl-JUi-A8-unsplash.jpg",
     "estate_title": "Mountain Retreat",
     "id": "5",
     "segment_name": "Retreat",
     "description": "Escape to tranquility in this serene mountain retreat nestled amidst towering pine trees and breathtaking vistas. This idyllic getaway offers a harmonious blend of rustic charm and modern comforts, featuring cozy living spaces, a gourmet kitchen, expansive decks for outdoor entertaining, and access to nearby hiking trails and recreational activities.",
+    "short_description": "Escape to tranquility in this serene mountain retreat with rustic charm and modern comforts.",
     "price": "$900,000",
     "status": "sale",
     "area": "4000 sq ft",
@@ -60,11 +66,12 @@
     "facilities": ["living room", "jacuzzi", "hiking trails"]
   },
   {
-    "image": "image_url_6.jpg",
+    "image": "https://i.postimg.cc/sXdkSNSv/vita-vilcina-Kt-Oid0-FLjq-U-unsplash.jpg",
     "estate_title": "City Penthouse",
     "id": "6",
     "segment_name": "Penthouse",
     "description": "Elevate your lifestyle in this exquisite city penthouse boasting unrivaled panoramic views of the skyline. Spanning multiple levels, this sophisticated residence offers luxurious living spaces, a chef's kitchen, expansive terraces for outdoor entertaining, and access to premium building amenities including a rooftop pool, fitness center, and concierge services.",
+    "short_description": "Elevate your lifestyle in this exquisite city penthouse with unrivaled panoramic views.",
     "price": "$5,000,000",
     "status": "sale",
     "area": "6000 sq ft",
