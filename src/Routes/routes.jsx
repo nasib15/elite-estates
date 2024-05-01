@@ -6,7 +6,7 @@ import Login from "../pages/Login";
 import ViewDetails from "../components/ViewDetails";
 import ErrorPage from "../components/ErrorPage";
 import Register from "../pages/Register";
-
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +21,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/updateProfile",
-        element: <UpdateProfile></UpdateProfile>,
+        element: (
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
@@ -33,8 +37,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <ViewDetails></ViewDetails>,
-        loader: () => fetch("/estates.json"),
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
+          </PrivateRoute>
+        ),
       },
     ],
   },

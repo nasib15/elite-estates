@@ -13,20 +13,25 @@ export const AuthContext = createContext();
 
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const signInUser = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const signOutUser = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
   const updateProfileName = (name, image) => {
+    setLoading(true);
     return updateProfile(auth.currentUser, {
       displayName: name,
       photoURL: image,
@@ -36,11 +41,19 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
+      setLoading(false);
     });
     return () => unsubscribe();
   }, []);
 
-  const info = { createUser, signInUser, signOutUser, updateProfileName, user };
+  const info = {
+    createUser,
+    signInUser,
+    signOutUser,
+    updateProfileName,
+    user,
+    loading,
+  };
   return <AuthContext.Provider value={info}>{children}</AuthContext.Provider>;
 };
 
