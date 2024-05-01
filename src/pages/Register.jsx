@@ -4,10 +4,12 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 const Register = () => {
   const { createUser, updateProfileName } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState(null);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -88,15 +90,20 @@ const Register = () => {
                 className: "before:content-none after:content-none",
               }}
             />
-            <Typography variant="h6" color="blue-gray" className="-mb-3">
+            <Typography variant="h6" color="blue-gray" className="-mb-3 ">
               Password
             </Typography>
             <Input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="pass"
               size="lg"
+              icon={
+                <span onClick={() => setShowPassword(!showPassword)}>
+                  {showPassword ? <IoMdEyeOff /> : <IoMdEye />}
+                </span>
+              }
               placeholder="********"
-              className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
+              className=" !border-t-blue-gray-200 focus:!border-t-gray-900 "
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
