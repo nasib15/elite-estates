@@ -1,26 +1,42 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import toast from "react-hot-toast";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateProfileName } = useContext(AuthContext);
+  const [registerError, setRegisterError] = useState(null);
+
   const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const pass = form.pass.value;
+    const name = form.name.value;
+    const photo = form.url.value;
+
+    if (!/^(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(pass)) {
+      setRegisterError(
+        "Password must contain at least 6 characters, including uppercase and lowercase letters."
+      );
+      toast.error(registerError);
+      return;
+    }
 
     createUser(email, pass)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        console.log(user);
+      .then(() => {
+        updateProfileName(name, photo);
+        toast.success("User registered successfully");
       })
       .catch((error) => {
-        console.error(error);
+        setRegisterError(error.message);
+        toast.error(registerError);
+        return;
       });
   };
+
   return (
     <div className="flex justify-center mt-6">
       <Card className="shadow-xl p-14" color="transparent" shadow={false}>
