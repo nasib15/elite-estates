@@ -4,8 +4,13 @@ import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import { useContext } from "react";
-import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import {
+  signInWithPopup,
+  GoogleAuthProvider,
+  GithubAuthProvider,
+} from "firebase/auth";
 import auth from "../firebase/firebase.config";
+import { FaGithub } from "react-icons/fa";
 
 export function Login() {
   const { signInUser } = useContext(AuthContext);
@@ -26,13 +31,24 @@ export function Login() {
       });
   };
 
-  const provider = new GoogleAuthProvider();
-
   const handleGoogleSignIn = () => {
-    signInWithPopup(auth, provider)
+    const googleProvider = new GoogleAuthProvider();
+    signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
         console.log(user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleGithubSignIn = () => {
+    const githubProvider = new GithubAuthProvider();
+    signInWithPopup(auth, githubProvider)
+      .then(() => {
+        console.log("User logged in successfully");
+        return;
       })
       .catch((error) => {
         console.error(error);
@@ -93,6 +109,14 @@ export function Login() {
               className="my-4 flex w-full gap-2 items-center justify-center  border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200"
             >
               <FcGoogle className="text-2xl"></FcGoogle>Continue with Google
+            </button>
+          </div>
+          <div>
+            <button
+              onClick={handleGithubSignIn}
+              className="my-4 flex w-full gap-2 items-center justify-center  border border-gray-300 rounded-lg shadow-md px-6 py-2 text-sm font-medium text-gray-800 hover:bg-gray-200"
+            >
+              <FaGithub className="text-2xl"></FaGithub>Continue with Github
             </button>
           </div>
           <Button type="submit" className="mt-6 bg-[#1abc9c]" fullWidth>

@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="max-w-[96%] mx-auto">
+    <div className="max-w-[96%] mx-auto mt-4">
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -98,12 +98,24 @@ const Navbar = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <button
-              onClick={handleSignOut}
-              className="btn bg-[#1abc9c] text-white hover:bg-[#16a085]"
-            >
-              Sign Out
-            </button>
+            <div className="flex items-center gap-4">
+              <div
+                className="tooltip tooltip-bottom"
+                data-tip={user.displayName}
+              >
+                <img
+                  src={user.photoURL}
+                  alt=""
+                  className="w-10 h-10 rounded-full "
+                />
+              </div>
+              <button
+                onClick={handleSignOut}
+                className="btn bg-[#1abc9c] text-white hover:bg-[#16a085]"
+              >
+                Sign Out
+              </button>
+            </div>
           ) : (
             <Link
               to={"/login"}
