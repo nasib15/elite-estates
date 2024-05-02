@@ -14,3 +14,4 @@ Website Link: [https://knh-nehal-elite-estates.vercel.app/](https://knh-nehal-el
 
 - Swiper JS
 - React-leaflet
+- AOS Package

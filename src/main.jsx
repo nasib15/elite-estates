@@ -5,6 +5,7 @@ import router from "./Routes/routes";
 import AuthProvider from "./providers/AuthProvider";
 import { Toaster } from "react-hot-toast";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <AuthProvider>
     <Toaster />

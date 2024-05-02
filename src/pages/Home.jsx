@@ -1,5 +1,9 @@
 import Banner from "../components/Banner";
 import Estates from "../components/Estates";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const Home = () => {
   return (

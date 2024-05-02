@@ -1,6 +1,8 @@
+/* eslint-disable react/jsx-key */
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
+import { MdSell } from "react-icons/md";
 
 const ViewDetails = () => {
   const { id } = useParams();
@@ -34,7 +36,8 @@ const ViewDetails = () => {
   } = estate;
 
   return (
-    <div className="mx-auto max-w-[96%] mt-6">
+    <div data-aos="fade-right"
+    data-aos-duration="500" className="mx-auto max-w-[96%] mt-6">
       <h2 className="text-center font-bold text-3xl">Details</h2>
       <div className="flex lg:flex-row flex-col gap-10 mt-10 shadow-lg p-10">
         <div className="lg:min-w-[40%] min-h-[100%]">
@@ -46,36 +49,49 @@ const ViewDetails = () => {
         </div>
         <div>
           <h2 className="font-bold text-2xl">{estate_title}</h2>
-          <p className="text-lg font-bold mt-5">
-            Location: <span className="font-normal">{location}</span>
-          </p>
-          <p className="text-2xl font-bold text-[#e55039] mt-5">
+          <div className="flex justify-between items-center">
+            <p className="text-lg font-bold mt-5">
+              Location: <span className="font-normal">{location}</span>
+            </p>
+            <div className="text-2xl ">
+              <div
+                className={
+                  status === "rent"
+                    ? "text-[#FFBE00] flex items-center gap-1"
+                    : "text-[#C40C0C] flex items-center gap-1"
+                }
+              >
+                <span>
+                  <MdSell />
+                </span>
+                {status}
+              </div>
+            </div>
+          </div>
+          <p className="text-2xl font-bold text-[#1abc9c] mt-5">
             {segment_name}
           </p>
           <div className="divider"></div>
-          <p className="text-lg font-bold">Short Description: </p>
+          <p className="text-lg font-bold">Description: </p>
 
           <p className="text-lg mt-2">{description}</p>
           <div className="divider"></div>
 
-          <div className="flex lg:flex-row flex-col gap-4 justify-between mt-5">
+          <div className="flex lg:flex-row flex-col gap-16  mt-5">
             <p className="text-lg font-bold">
-              Season: <span className="font-normal">{price}</span>
+              Price: <span className="font-normal">{price}</span>
             </p>
+
             <p className="text-lg font-bold">
-              Average Cost: <span className="font-normal">{status}$</span>
-            </p>
-            <p className="text-lg font-bold">
-              Total Visitors Per Year:{" "}
-              <span className="font-normal">{area}</span>
+              Area: <span className="font-normal">{area}</span>
             </p>
           </div>
           <div className="divider"></div>
           <div className="mt-5">
-            <p className="text-lg font-bold">Facilities</p>
+            <p className="text-xl font-bold">Facilities</p>
             <ul className="list-disc list-inside mt-2">
               {facilities.map((facility) => (
-                <li key={facility.id}>{facility.name}</li>
+                <li className="font-medium capitalize">{facility}</li>
               ))}
             </ul>
           </div>

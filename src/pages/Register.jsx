@@ -40,7 +40,11 @@ const Register = () => {
   };
 
   return (
-    <div className="flex justify-center mt-6">
+    <div
+      data-aos="zoom-out"
+      data-aos-duration="500"
+      className="flex justify-center mt-6"
+    >
       <Card className="shadow-xl p-14" color="transparent" shadow={false}>
         <Typography className="text-center" variant="h4" color="blue-gray">
           Register
