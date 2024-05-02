@@ -30,7 +30,7 @@ const EstateCard = ({ estate }) => {
     <Card
       data-aos="fade-up"
       data-aos-duration="500"
-      className="w-full max-w-[26rem] shadow-lg mt-10 "
+      className="w-full flex flex-col shadow-lg"
     >
       <CardHeader floated={false} color="blue-gray">
         <img src={image} alt="ui/ux review check" />
@@ -51,9 +51,13 @@ const EstateCard = ({ estate }) => {
           </svg>
         </IconButton>
       </CardHeader>
-      <CardBody>
+      <CardBody className="flex-1">
         <div className="flex items-center justify-between">
-          <Typography variant="h5" color="blue-gray" className="font-medium">
+          <Typography
+            variant="h5"
+            color="blue-gray"
+            className="font-bold text-2xl"
+          >
             {estate_title}
           </Typography>
           <Typography
@@ -66,25 +70,33 @@ const EstateCard = ({ estate }) => {
         <div className="my-2">
           <p className="font-bold">Category: {segment_name}</p>
         </div>
-        <Typography color="gray">{short_description}</Typography>
-
-        <div>
-          <Typography color="gray" className="flex items-center gap-2">
-            <HiOutlineOfficeBuilding />
-            {area}
-          </Typography>
-        </div>
-        <div>
-          <Typography color="gray" className="flex items-center gap-2">
-            <CiLocationOn />
-            {location}
-          </Typography>
+        <Typography color="gray" className="my-4">
+          {short_description}
+        </Typography>
+        <div className="space-y-1">
+          <div>
+            <Typography color="gray" className="flex items-center gap-2">
+              <HiOutlineOfficeBuilding />
+              {area}
+            </Typography>
+          </div>
+          <div>
+            <Typography color="gray" className="flex items-center gap-2">
+              <CiLocationOn />
+              {location}
+            </Typography>
+          </div>
+          <div>
+            <Typography color="gray" className="flex items-center gap-2">
+              <CiLocationOn />
+              {price}
+            </Typography>
+          </div>
         </div>
       </CardBody>
-      <CardFooter className="pt-3 flex justify-between items-center">
-        <Typography color="gray">Price:{price}</Typography>
+      <CardFooter className="pt-3 flex flex-col">
         <Link to={`/details/${id}`}>
-          <Button size="lg" className="bg-[#1abc9c]">
+          <Button className="bg-[#1abc9c] py-4" fullWidth>
             VIEW DETAILS
           </Button>
         </Link>

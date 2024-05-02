@@ -36,7 +36,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="space-y-2 dropdown-content z-[1] p-3 shadow bg-base-100 rounded-box w-52"
+              className="space-y-2 dropdown-content z-[10] p-3 shadow bg-base-100 rounded-box w-52"
             >
               <li>
                 <NavLink
@@ -64,7 +64,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <Link to={"/"} className="btn btn-ghost text-xl font-bold">
+          <Link to={"/"} className="btn btn-ghost text-3xl font-bold">
             Elite <span className="text-[#1abc9c] ml-0">Estates</span>
           </Link>
         </div>

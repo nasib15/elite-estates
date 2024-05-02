@@ -6,16 +6,13 @@ const Estates = () => {
   return (
     <div className="my-24">
       <h2 className="font-bold text-center text-4xl">Estates</h2>
-      <p className="text-center my-4 text-lg opacity-85 w-[60%] mx-auto">
+      <p className="text-center my-4 text-lg opacity-85 w-[80%] lg:w-[60%] mx-auto">
         Explore our Estate Section for a curated selection of luxurious
         residences, each redefining upscale living. Find your perfect sanctuary
         today.
       </p>
 
-      <div
-        
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
-      >
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {estates.map((estate) => (
           <EstateCard key={estate.id} estate={estate}></EstateCard>
         ))}

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Loading from "./Loading";
 import { MdSell } from "react-icons/md";
+import { SiTicktick } from "react-icons/si";
 
 const ViewDetails = () => {
   const { id } = useParams();
@@ -36,8 +37,11 @@ const ViewDetails = () => {
   } = estate;
 
   return (
-    <div data-aos="fade-right"
-    data-aos-duration="500" className="mx-auto max-w-[96%] mt-6">
+    <div
+      data-aos="fade-right"
+      data-aos-duration="500"
+      className="mx-auto max-w-[96%] mt-6"
+    >
       <h2 className="text-center font-bold text-3xl">Details</h2>
       <div className="flex lg:flex-row flex-col gap-10 mt-10 shadow-lg p-10">
         <div className="lg:min-w-[40%] min-h-[100%]">
@@ -73,15 +77,13 @@ const ViewDetails = () => {
           </p>
           <div className="divider"></div>
           <p className="text-lg font-bold">Description: </p>
-
           <p className="text-lg mt-2">{description}</p>
           <div className="divider"></div>
 
-          <div className="flex lg:flex-row flex-col gap-16  mt-5">
+          <div className="flex lg:flex-row flex-col gap-4 lg:gap-16 mt-5">
             <p className="text-lg font-bold">
               Price: <span className="font-normal">{price}</span>
             </p>
-
             <p className="text-lg font-bold">
               Area: <span className="font-normal">{area}</span>
             </p>
@@ -89,9 +91,9 @@ const ViewDetails = () => {
           <div className="divider"></div>
           <div className="mt-5">
             <p className="text-xl font-bold">Facilities</p>
-            <ul className="list-disc list-inside mt-2">
+            <ul className="mt-2">
               {facilities.map((facility) => (
-                <li className="font-medium capitalize">{facility}</li>
+                <li className="flex items-center gap-2 font-medium capitalize"><span><SiTicktick /></span>{facility}</li>
               ))}
             </ul>
           </div>

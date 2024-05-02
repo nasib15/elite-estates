@@ -17,7 +17,7 @@ const Footer = () => {
                 Elite <span className="text-[#1abc9c]">Estates</span>
               </span>
             </a>
-            <div className="w-96 mt-4">
+            <div className="lg:max-w-96 lg:pr-6 mt-4">
               <MapContainer center={position} zoom={16} scrollWheelZoom={false}>
                 <TileLayer
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -152,7 +152,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="py-6 text-sm text-center text-gray-400">
+        <div className="py-6 text-sm text-center text-gray-500">
           © 2024 Elite Estates. All rights reserved.
         </div>
       </footer>
