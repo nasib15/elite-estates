@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
 
 const Register = () => {
-  const { createUser, updateProfileName } = useContext(AuthContext);
+  const { createUser, updateProfileInfo } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState(null);
   const [showPassword, setShowPassword] = useState(false);
 
@@ -29,12 +29,12 @@ const Register = () => {
 
     createUser(email, pass)
       .then(() => {
-        updateProfileName(name, photo);
         toast.success("User registered successfully");
+        updateProfileInfo(name, photo);
       })
-      .catch((error) => {
-        setRegisterError(error.message);
-        toast.error(registerError);
+      .catch(async (error) => {
+        await setRegisterError(error.message);
+        await toast.error(registerError);
         return;
       });
   };
@@ -98,9 +98,12 @@ const Register = () => {
               name="pass"
               size="lg"
               icon={
-                <span onClick={() => setShowPassword(!showPassword)}>
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
                   {showPassword ? <IoMdEyeOff /> : <IoMdEye />}
-                </span>
+                </button>
               }
               placeholder="********"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900 "

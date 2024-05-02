@@ -3,7 +3,7 @@ import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import {
   signInWithPopup,
   GoogleAuthProvider,
@@ -11,9 +11,13 @@ import {
 } from "firebase/auth";
 import auth from "../firebase/firebase.config";
 import { FaGithub } from "react-icons/fa";
+import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import toast from "react-hot-toast";
 
 export function Login() {
   const { signInUser } = useContext(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
+  const [loginError, setLoginError] = useState(null);
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -22,12 +26,15 @@ export function Login() {
     const pass = form.pass.value;
 
     signInUser(email, pass)
-      .then((result) => {
-        const user = result.user;
-        console.log(user);
+      .then(() => {
+        toast.success("User logged in successfully");
+        return;
       })
-      .catch((error) => {
-        console.error(error);
+      .catch(async (error) => {
+        console.log(error);
+        await setLoginError(error.message);
+        await toast.error(loginError);
+        return;
       });
   };
 
@@ -85,9 +92,17 @@ export function Login() {
               Password
             </Typography>
             <Input
-              type="password"
+              type={showPassword ? "text" : "password"}
               name="pass"
               size="lg"
+              icon={
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <IoMdEyeOff /> : <IoMdEye />}
+                </button>
+              }
               placeholder="********"
               className=" !border-t-blue-gray-200 focus:!border-t-gray-900"
               labelProps={{

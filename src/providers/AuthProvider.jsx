@@ -30,7 +30,7 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  const updateProfileName = (name, image) => {
+  const updateProfileInfo = (name, image) => {
     setLoading(true);
     return updateProfile(auth.currentUser, {
       displayName: name,
@@ -50,9 +50,11 @@ const AuthProvider = ({ children }) => {
     createUser,
     signInUser,
     signOutUser,
-    updateProfileName,
+    updateProfileInfo,
     user,
+    setUser,
     loading,
+    setLoading,
   };
   return <AuthContext.Provider value={info}>{children}</AuthContext.Provider>;
 };
