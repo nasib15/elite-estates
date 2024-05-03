@@ -6,7 +6,8 @@ import { Helmet } from "react-helmet";
 import toast from "react-hot-toast";
 
 const UpdateProfile = () => {
-  const { user, setLoading, updateProfileInfo } = useContext(AuthContext);
+  const { user, setUser, setLoading, updateProfileInfo } =
+    useContext(AuthContext);
 
   const handleUpdateProfile = (e) => {
     e.preventDefault();
@@ -16,6 +17,7 @@ const UpdateProfile = () => {
 
     updateProfileInfo(name, photo).then(() => {
       toast.success("Profile Updated Successfully");
+      setUser(user);
       setLoading(false);
     });
   };
