@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 import toast from "react-hot-toast";
 import { IoMdEye, IoMdEyeOff } from "react-icons/io";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const { createUser, updateProfileInfo } = useContext(AuthContext);
@@ -45,6 +46,7 @@ const Register = () => {
       data-aos-duration="500"
       className="flex justify-center mt-6"
     >
+      <Helmet><title>Register | Elite Estates</title></Helmet>
       <Card className="shadow-xl p-14" color="transparent" shadow={false}>
         <Typography className="text-center" variant="h4" color="blue-gray">
           Register

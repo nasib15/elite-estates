@@ -2,6 +2,7 @@
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import { useContext, useState } from "react";
 import { AuthContext } from "./../providers/AuthProvider";
+import { Helmet } from "react-helmet";
 
 const UpdateProfile = () => {
   const { user, setUser, setLoading, updateProfileInfo } =
@@ -24,6 +25,9 @@ const UpdateProfile = () => {
       data-aos-duration="500"
       className="flex justify-center mt-6"
     >
+      <Helmet>
+        <title>Update Profile | Elite Estates</title>
+      </Helmet>
       <Card className="shadow-xl p-14" color="transparent" shadow={false}>
         <Typography className="text-center" variant="h4" color="blue-gray">
           Update Profile

@@ -2,6 +2,7 @@
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { AuthContext } from "../providers/AuthProvider";
 import { useContext, useState } from "react";
 import {
@@ -63,7 +64,14 @@ export function Login() {
   };
 
   return (
-    <div data-aos="zoom-in" data-aos-duration="500" className="flex justify-center mt-6">
+    <div
+      data-aos="zoom-in"
+      data-aos-duration="500"
+      className="flex justify-center mt-6"
+    >
+      <Helmet>
+        <title>Login | Elite Estates</title>
+      </Helmet>
       <Card className="shadow-xl p-14" color="transparent" shadow={false}>
         <Typography className="text-center" variant="h4" color="blue-gray">
           Login
