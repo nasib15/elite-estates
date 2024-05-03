@@ -4,7 +4,7 @@ const BlogsCard = () => {
       <div
         data-aos="fade-up"
         data-aos-duration="800"
-        className="lg:max-w-sm w-full mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        className="lg:max-w-xl w-full mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="#">
           <img

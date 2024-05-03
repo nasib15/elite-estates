@@ -17,7 +17,7 @@ const Blogs = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="lg:max-w-sm w-full mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className="lg:max-w-xl w-full mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
             <a href="#">
               <img
@@ -65,7 +65,7 @@ const Blogs = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1100"
-            className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className="lg:max-w-xl mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
             <a href="#">
               <img
@@ -113,7 +113,7 @@ const Blogs = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="800"
-            className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className="lg:max-w-xl mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
             <a href="#">
               <img
@@ -161,7 +161,7 @@ const Blogs = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
-            className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className="lg:max-w-xl mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
             <a href="#">
               <img
@@ -209,7 +209,7 @@ const Blogs = () => {
           <div
             data-aos="fade-up"
             data-aos-duration="1100"
-            className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+            className="lg:max-w-xl mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
           >
             <a href="#">
               <img
@@ -227,7 +227,8 @@ const Blogs = () => {
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                 Location matters! Find out why the location of a property is
                 crucial in real estate, affecting its value, desirability, and
-                potential for future growth.
+                potential for future growth and discover which option best suits
+                your financial goals and lifestyle.
               </p>
               <a
                 href="#"
