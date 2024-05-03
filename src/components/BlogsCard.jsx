@@ -1,7 +1,11 @@
 const BlogsCard = () => {
   return (
     <div>
-      <div className="lg:max-w-sm w-full mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="800"
+        className="lg:max-w-sm w-full mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+      >
         <a href="#">
           <img
             className="rounded-t-lg h-52 lg:h-64 w-full object-cover"

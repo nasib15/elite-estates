@@ -1,15 +1,24 @@
+/* eslint-disable react/no-unescaped-entities */
 import BlogsCard from "../components/BlogsCard";
+import { Helmet } from "react-helmet";
 
 const Blogs = () => {
   return (
     <div className="max-w-[96%] mx-auto">
+      <Helmet>
+        <title>Blogs | Elite Estates</title>
+      </Helmet>
       <div className="text-center my-6">
         <h2 className="text-3xl font-semibold">Blogs Section</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
         <BlogsCard></BlogsCard>
         <div>
-          <div className="lg:max-w-sm w-full mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="lg:max-w-sm w-full mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
             <a href="#">
               <img
                 className="rounded-t-lg h-52 lg:h-64 w-full object-cover"
@@ -53,7 +62,11 @@ const Blogs = () => {
           </div>
         </div>
         <div>
-          <div className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1100"
+            className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
             <a href="#">
               <img
                 className="rounded-t-lg h-52 lg:h-64 w-full object-cover"
@@ -97,7 +110,11 @@ const Blogs = () => {
           </div>
         </div>
         <div>
-          <div className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="800"
+            className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
             <a href="#">
               <img
                 className="rounded-t-lg h-52 lg:h-64 w-full object-cover"
@@ -141,7 +158,11 @@ const Blogs = () => {
           </div>
         </div>
         <div>
-          <div className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
             <a href="#">
               <img
                 className="rounded-t-lg h-52 lg:h-64 w-full object-cover"
@@ -185,7 +206,11 @@ const Blogs = () => {
           </div>
         </div>
         <div>
-          <div className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1100"
+            className="lg:max-w-sm mt-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+          >
             <a href="#">
               <img
                 className="rounded-t-lg h-52 lg:h-64 w-full object-cover"

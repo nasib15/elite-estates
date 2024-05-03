@@ -74,7 +74,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="space-y-3">
+            <div className="space-y-3 ">
               <h3 className="uppercase text-black font-semibold text-lg">
                 Developers
               </h3>
@@ -100,7 +100,7 @@ const Footer = () => {
               <div className="uppercase text-black font-semibold text-lg">
                 Social media
               </div>
-              <div className="flex justify-start space-x-3">
+              <div className="flex justify-start space-x-3 opacity-60">
                 <a
                   rel="noopener noreferrer"
                   href="https://www.facebook.com"
@@ -149,6 +149,11 @@ const Footer = () => {
                   </svg>
                 </a>
               </div>
+              <p className="footer-text mt-4 text-sm text-black opacity-70">
+                Connect with us on social media for travel inspiration, updates,
+                and exclusive offers. Follow us on Facebook, Twitter, YouTube,
+                and LinkedIn for unforgettable adventures!
+              </p>
             </div>
           </div>
         </div>

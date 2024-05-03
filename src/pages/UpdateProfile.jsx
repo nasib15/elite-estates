@@ -1,22 +1,23 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "./../providers/AuthProvider";
 import { Helmet } from "react-helmet";
+import toast from "react-hot-toast";
 
 const UpdateProfile = () => {
-  const { user, setUser, setLoading, updateProfileInfo } =
-    useContext(AuthContext);
+  const { user, setLoading, updateProfileInfo } = useContext(AuthContext);
 
   const handleUpdateProfile = (e) => {
-    console.log(user, "ager user");
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
     const photo = form.url.value;
 
-    updateProfileInfo(name, photo);
-    setLoading(false);
+    updateProfileInfo(name, photo).then(() => {
+      toast.success("Profile Updated Successfully");
+      setLoading(false);
+    });
   };
 
   return (
@@ -63,6 +64,7 @@ const UpdateProfile = () => {
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
+              required
             />
             <Typography variant="h6" color="blue-gray" className="-mb-3">
               PhotoURL
@@ -76,6 +78,7 @@ const UpdateProfile = () => {
               labelProps={{
                 className: "before:content-none after:content-none",
               }}
+              required
             />
           </div>
           <Button type="submit" className="mt-6 bg-[#1abc9c]" fullWidth>
