@@ -52,6 +52,18 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink
+                  to={"/blogs"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "bg-[#1abc9c] text-white px-3 py-2 rounded-lg w-full inline-block"
+                      : "hover:bg-[#1abc9c] hover:text-white px-3 py-2 rounded-lg w-full inline-block"
+                  }
+                >
+                  Blogs
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
                   to={"/updateProfile"}
                   className={({ isActive }) =>
                     isActive
@@ -80,6 +92,18 @@ const Navbar = () => {
                 }
               >
                 Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to={"/blogs"}
+                className={({ isActive }) =>
+                  isActive
+                    ? "bg-[#1abc9c] text-white px-3 py-2 rounded-lg"
+                    : "hover:bg-[#1abc9c] hover:text-white px-3 py-2 rounded-lg"
+                }
+              >
+                Blogs
               </NavLink>
             </li>
             <li>
