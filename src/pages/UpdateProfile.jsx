@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import { useContext } from "react";
 import { AuthContext } from "./../providers/AuthProvider";
