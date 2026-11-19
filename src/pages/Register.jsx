@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { Card, Input, Button, Typography } from "@material-tailwind/react";
 import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
